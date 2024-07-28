@@ -7,11 +7,13 @@ namespace ReverterStrings
     {
         string[] word;
         string tempText;
+        string[] textClearOut;
 
         public MainWindow()
         {
             InitializeComponent();
-            OutTextSpliter.ItemsSource = new string[] { "Результат..." };
+            textClearOut = new string[] { "Результат..." };
+            OutTextSpliter.ItemsSource = textClearOut;
         }
 
         private string[] SplitText(string text)
@@ -39,7 +41,7 @@ namespace ReverterStrings
         private void ClearButtonSplit(object sender, RoutedEventArgs e)
         {
             InputTextSpliter.Text = "Введите Ваш текст";
-            OutTextSpliter.ItemsSource = new string[] { "Результат..." };
+            OutTextSpliter.ItemsSource = textClearOut;
         }
 
         private void ClearButtonRevert(object sender, RoutedEventArgs e)
