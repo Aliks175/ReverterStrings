@@ -7,6 +7,72 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="StringSpliter">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="InputTextSpliter" 
+                             HorizontalAlignment="Center"
+                             Margin="0,10,0,0" 
+                             TextWrapping="Wrap" 
+                             Text="Введите Ваш текст"
+                             VerticalAlignment="Top"
+                             Width="774" Height="100"/>
+
+                    <ListBox Name="OutTextSpliter"
+                             d:ItemsSource="{d:SampleData ItemCount=0}"
+                             Margin="0,252,0,0" />
+                    <Button Content="Split" 
+                             HorizontalAlignment="Left" 
+                             Margin="640,129,0,0"
+                             VerticalAlignment="Top"
+                             Width="122"
+                             Height="46"
+                            Click="ButtonSplit"/>
+                    <Button Content="Clear"
+                            HorizontalAlignment="Left" 
+                            Margin="513,131,0,0" 
+                            VerticalAlignment="Top" 
+                            Height="44" Width="106" 
+                            Click="ClearButtonSplit"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="ReverterString">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Revert" 
+                            HorizontalAlignment="Left" 
+                            Margin="640,129,0,0"
+                            VerticalAlignment="Top"
+                            Width="122"
+                            Height="46"
+                            Click="ButtonRevert" />
+                    <TextBox Name="InputTextRevert" 
+                             HorizontalAlignment="Center"
+                             Margin="0,10,0,0" 
+                             TextWrapping="Wrap" 
+                             Text="Введите Ваш текст"
+                             VerticalAlignment="Top"
+                             Width="774" Height="100"/>
+                    <Label  Name="OutTextRevert" 
+                            Content="Результат..." 
+                            HorizontalAlignment="Center"
+                            Margin="0,252,0,0" 
+                            VerticalAlignment="Top" 
+                            Height="144" Width="774"/>
+                    <Button Content="Clear"
+                            HorizontalAlignment="Left" 
+                            Margin="513,131,0,0"
+                            VerticalAlignment="Top"
+                            Height="44" Width="106"
+                            Click="ClearButtonRevert" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
